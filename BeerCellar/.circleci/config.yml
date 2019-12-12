@@ -2,16 +2,17 @@
 version: 2
 jobs:
   build:
+    working_directory: Users/carlcheung/Documents/Revature/BeerFrontEnd/BeerCellar
     docker:
-      - image: debian:stretch
-
+      - image: circleci/node:10-browsers
     steps:
       - checkout
-
-      - run:
-          name: Greeting
-          command: echo Hello, world.
-
-      - run:
-          name: Print the Current Time
-          command: date
+      - restore_cache:
+          key: BeerCellar-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: npm install
+      - save_cache:
+          key: BeerCellar-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - "node_modules"
+      - run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
+      - run: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
