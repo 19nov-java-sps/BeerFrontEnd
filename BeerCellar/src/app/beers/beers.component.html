@@ -1,0 +1,23 @@
+<h2> My Beers</h2>
+<ul class="beers">
+    <li *ngFor="let beer of beers"
+        [class.selected]="beer === selectedBeer"
+        (click)="onSelect(beer)">
+        <span class="badge">{{beer.id}}</span> {{beer.name}}
+    </li>
+</ul>
+
+<app-beer-detail [beer]="selectedBeer"></app-beer-detail>
+
+
+<div *ngIf="selectedBeer">
+    <h2>{{selectedBeer.name}} Details</h2>
+    <div><span>id: </span>{{selectedBeer.id}}</div>
+    <div>
+        <label>name:
+            <input [(ngModel)]="selectedBeer.name" placeholder="name"/>
+        </label>
+    </div>
+</div>
+
+

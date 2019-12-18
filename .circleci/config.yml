@@ -2,7 +2,7 @@
 version: 2
 jobs:
   build:
-    working_directory: Users/carlcheung/Documents/Revature/BeerFrontEnd/BeerCellar
+    working_directory: ~/BeerFrontEnd
     docker:
       - image: circleci/node:10-browsers
     steps:
