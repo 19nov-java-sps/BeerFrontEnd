@@ -1,0 +1,30 @@
+.container {
+    background-size: cover; 
+    padding: 5%; 
+    height: 100%; 
+}
+.form {
+    width: 100%; 
+}
+.card {
+    width: 30%; 
+}
+.card-header {
+    background: #babfff; 
+}
+.card-title {
+    display: flex; 
+    justify-content: center; 
+    padding-top: 4%; 
+}
+.item {
+    display: flex; 
+    flex-direction: column; 
+}
+.submit-button {
+    display: flex; 
+    flex-direction: flex-end;
+}
+.alert-message {
+    color: red; 
+}
