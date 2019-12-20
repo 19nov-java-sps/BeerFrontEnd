@@ -8,6 +8,7 @@ import { BeersComponent } from './beers/beers.component';
 import { BeerDetailComponent } from './beer-detail/beer-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginComponent } from './login/login.component';
     BeersComponent,
     BeerDetailComponent,
     MessagesComponent,
-    LoginComponent
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
