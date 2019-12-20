@@ -2,4 +2,10 @@ Branch created to try authorization scheme.
 auth guard --- prevent unauthenticated users from accessing routes that require login
 http error interceptor --- check http responses from api
 JWT interceptor --- json web token to authorization header if logged in
-auth service --- log in and log out 
+auth service --- log in and log out
+
+
+
+
+
+cwc 19 Dec 2019 
