@@ -10,7 +10,7 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient, private router: Router) { }
 
-  private url: string = "http://localhost:8080/BeerBackEnd/login"; 
+  private url: string = "http://3.90.228.40:8080/BeerBackend/login"; 
   private body: string; 
 
   private httpOptions = {
@@ -18,15 +18,15 @@ export class LoginService {
     observe: "response" as "body"
   }; 
 
-  private auth: string;
+  private authorization: string;
 
   authenticate(username: string, password: string): void {
     this.body = `username=${username} & password=${password}`; 
     this.httpClient.post(`${this.url}`, this.body, this.httpOptions).subscribe(
       response => {
-        this.auth = (response["headers"].get("Authorization")); 
-        sessionStorage.setItem("token", this.auth); 
-        this.router.navigate([]);
+        this.authorization = (response["headers"].get("Authorization")); 
+        sessionStorage.setItem("token", this.authorization); 
+        this.router.navigate(["NavBar"]);
       }
     );
   }

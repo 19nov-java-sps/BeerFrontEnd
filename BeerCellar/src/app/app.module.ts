@@ -7,11 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NavComponent } from './nav/nav.component';
 import { RandomBeerComponent } from './random-beer/random-beer.component'; 
-import { RandomBeerService } from './random-beer.service';
+import { RandomBeerService } from './services/random-beer.service';
 import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './services/login.service';
 import { FormsModule } from '@angular/forms';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     RandomBeerComponent,
     AccountComponent,
-    LoginComponent
+    LoginComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
