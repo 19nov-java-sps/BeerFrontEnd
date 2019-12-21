@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RandomBeer } from '../../Models/random-beer.model' 
+import { RandomBeer } from '../Models/random-beer.model' 
 import { RandomBeerService } from '../services/random-beer.service';
 
 @Component({
