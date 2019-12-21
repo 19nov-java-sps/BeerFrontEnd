@@ -21,7 +21,7 @@ export class LoginService {
 
   authenticate(username: string, password: string): void {
     this.body = `username=${username} & password=${password}`; 
-    this.http.post(`${this.url}`, this.body, this.httpOptions).subscribe(
+    this.httpClient.post(`${this.url}`, this.body, this.httpOptions).subscribe(
       response => {
         this.auth = (response["headers"].get("Authorization")); 
         sessionStorage.setItem("token", this.auth); 
