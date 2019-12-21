@@ -7,7 +7,10 @@ import { AppComponent } from './app.component';
 import { BeersComponent } from './beers/beers.component';
 import { BeerDetailComponent } from './beer-detail/beer-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { LoginComponent } from './login/login/login.component';
+import { LoginComponent } from './login/login.component';
+import { AccountComponent } from './account/account.component';
+import { LoginService } from './services/login.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,14 +18,16 @@ import { LoginComponent } from './login/login/login.component';
     BeersComponent,
     BeerDetailComponent,
     MessagesComponent,
-    LoginComponent
+    LoginComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    FormsModule
+    FormsModule, 
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ LoginService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
