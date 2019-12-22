@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginService } from './services/login.service';
 import { FormsModule } from '@angular/forms';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { FavoritesService } from './services/favorites.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [RandomBeerService, LoginService],
+  providers: [RandomBeerService, LoginService, FavoritesService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
