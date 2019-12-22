@@ -11,12 +11,14 @@ import { LoginComponent } from './login/login.component';
 import { AccountComponent } from './account/account.component';
 import { LoginService } from './services/login.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BeerComponent } from './beer/beer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    BeerComponent
   ],
   imports: [
     BrowserModule,
