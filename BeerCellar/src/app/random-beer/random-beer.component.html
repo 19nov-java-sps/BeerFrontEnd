@@ -1,0 +1,29 @@
+
+<!-- <p>Random Beer Comp</p> -->
+
+<h1> Random Beer </h1>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+      <th> Name </th>
+      <th> Image </th>
+      <th> Low IBU </th>
+      <th> High IBU </th>
+      <th> Low ABV </th>
+      <th> High ABV </th>
+      <th> Low SRM </th>
+      <th> High SRM </th>
+    </tr>
+  </thead>
+
+  <tr *ngFor="let get of listRandomBeer">
+    <td>{{get.name}}</td>
+    <td><img src="{{get.image}}" height="150" width="170"></td>
+    <td>{{get.lowibu}}</td>
+    <td>{{get.highibu}}</td>
+    <td>{{get.lowabv}}</td>
+    <td>{{get.highabv}}</td>
+    <td>{{get.lowsrm}}</td>
+    <td>{{get.highsrm}}</td>
+  </tr>
