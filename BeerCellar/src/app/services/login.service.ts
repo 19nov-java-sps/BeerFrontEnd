@@ -13,15 +13,15 @@ export class LoginService {
   private url: string = "http://3.90.228.40:8080/BeerBackend/login"; 
   private body: string; 
 
+  private authorization: string;
+
   private httpOptions = {
     headers: new HttpHeaders({"Content-Type": "application/x-www-form-urlencoded"}), 
     observe: "response" as "body"
   }; 
 
-  private authorization: string;
-
   authenticate(username: string, password: string): void {
-    this.body = `username=${username} & password=${password}`; 
+    this.body = `username=${username}&password=${password}`; 
     this.httpClient.post(`${this.url}`, this.body, this.httpOptions).subscribe(
       response => {
         this.authorization = (response["headers"].get("Authorization")); 
