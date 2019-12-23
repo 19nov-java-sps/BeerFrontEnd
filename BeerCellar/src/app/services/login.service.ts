@@ -26,7 +26,7 @@ export class LoginService {
       response => {
         this.authorization = (response["headers"].get("Authorization")); 
         sessionStorage.setItem("token", this.authorization); 
-        this.router.navigate(["NavBar"]);
+        this.router.navigate(["home"]);
       }
     );
   }
