@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Favorite } from ; 
+import { Favorite } from '../models/favorites.model'; 
   import { FavoritesService } from '../services/favorites.service';
 
 
@@ -18,15 +18,17 @@ export class FavoritesComponent implements OnInit {
   private favoriteBeers: Favorite[]; 
 
   ngOnInit() {
-    this.favorite.getBeerId().subscribe(
-      (id) => {
-        this.favoriteBeers.push(id);
-      }
-    );
+    // if (token && ) {
+    //   this.addBeer(beer); 
+    // }
   }
 
+  // addBeer(beer: RandomBeer): void {
+  //   this.favoriteBeers.push(beer); 
+  // }
+
   clear() {
-    sessionStorage.clear(); 
+    sessionStorage.clear();  
     this.router.navigate([]); 
   }
 

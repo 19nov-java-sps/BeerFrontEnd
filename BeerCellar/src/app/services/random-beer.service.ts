@@ -12,7 +12,7 @@ import { RandomBeer } from '../Models/random-beer.model';
 export class RandomBeerService {
 
   private url: string = 'https://sandbox-api.brewerydb.com/v2/beer/random/?key=0da93aab15976e9da7c3265b3d4f486f';
-  private imageUrl: string = 'https://sandbox-api.brewerydb.com/v2/beers/?key=0da93aab15976e9da7c3265b3d4f486f'
+  // private imageUrl: string = 'https://sandbox-api.brewerydb.com/v2/beers/?key=0da93aab15976e9da7c3265b3d4f486f'
 
   constructor(private http: HttpClient) { }
 
@@ -22,13 +22,13 @@ export class RandomBeerService {
   getRandomBeers(): Observable<RandomBeer> {
     console.log("CORS error issue")
     let headers = { 'Access-Control-Allow-Origin':'*'}
-    return this.http.get<RandomBeer>(this.url)
+    return this.http.get<RandomBeer>(this.url); 
   }
 
-  getImage(): Observable<any> {
-    let headers = { 'Access-Control-Allow-Origin':'*'}
-    return this.http.get<any>(this.imageUrl)
-  }
+  // getImage(): Observable<any> {
+  //   let headers = { 'Access-Control-Allow-Origin':'*'}
+  //   return this.http.get<any>(this.imageUrl)
+  // }
 
 
  }

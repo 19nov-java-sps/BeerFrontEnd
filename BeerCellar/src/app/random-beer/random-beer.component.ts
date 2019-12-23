@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RandomBeer } from '../Models/random-beer.model' 
+import { RandomBeer } from '../models/random-beer.model' 
 import { RandomBeerService } from '../services/random-beer.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { RandomBeerService } from '../services/random-beer.service';
 })
 export class RandomBeerComponent implements OnInit {
 
-  listRandomBeer: RandomBeer[] = [];
+  retrievedBeer: RandomBeer ;
 
     constructor(private randombeer: RandomBeerService) { }
 
@@ -17,14 +17,10 @@ export class RandomBeerComponent implements OnInit {
     this.randombeer.getRandomBeers()
       .subscribe(data =>
         {
-          this.listRandomBeer.push(data);
+          this.retrievedBeer = data;         
         }
     );
-
-
-
-
-
   }
+
 
 }
