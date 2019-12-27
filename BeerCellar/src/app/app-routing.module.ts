@@ -16,7 +16,7 @@ const routes: Routes =
   // { path: 'about', component: AboutComponent },
   {path: "login", component: LoginComponent},
   {path: "home", component: NavComponent},
-  {path: "logout", component: AccountComponent},
+  {path: "logout",component: AccountComponent},
   {path: "random-beer", component: RandomBeerComponent},
   {path: "favorites", component:FavoritesComponent}
 

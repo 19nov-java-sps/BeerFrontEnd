@@ -1,12 +1,12 @@
 export class RandomBeer { 
          name: string;
          image: string;
-         lowibu: number;
-         highibu: number;
-         lowabv: number;
-         highabv: number;
-         lowsrm: number;
-         highsrm: number;
+         ibuMin: number;
+         ibuMax: number;
+         abvMin: number;
+         abvMax: number;
+         srmMin: number;
+         srmMax: number;
         //  description: string;
         //  catergory: string;
 }

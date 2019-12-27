@@ -1,10 +1,11 @@
+
 <h1> Random Beer </h1>
 
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
       <th> Name </th>
-      <th> Image </th>
+      <!-- <th> Image </th> -->
       <th> Low IBU </th>
       <th> High IBU </th>
       <th> Low ABV </th>
@@ -14,13 +15,13 @@
     </tr>
   </thead>
 
-  <tr *ngFor="let get of listRandomBeer">
-    <td>{{get.name}}</td>
-    <td><img src="{{get.image}}" height="150" width="170"></td>
-    <td>{{get.lowibu}}</td>
-    <td>{{get.highibu}}</td>
-    <td>{{get.lowabv}}</td>
-    <td>{{get.highabv}}</td>
-    <td>{{get.lowsrm}}</td>
-    <td>{{get.highsrm}}</td>
+  <tr >
+    <td>{{ retrievedBeer.name }}</td>
+    <!-- <td>{{ retrievedBeer["labels"]["medium"] }}></td> -->
+    <td>{{ retrievedBeer["style"]["ibuMin"] }}</td>
+    <td>{{ retrievedBeer["style"]["ibuMax"] }}</td>
+    <td>{{ retrievedBeer["style"]["abvMin"] }}</td>
+    <td>{{ retrievedBeer["style"]["abvMax"] }}</td>
+    <td>{{ retrievedBeer["style"]["srmMin"] }}</td>
+    <td>{{ retrievedBeer["style"]["srmMax"] }}</td>
   </tr>

@@ -14,13 +14,20 @@ export class RandomBeerComponent implements OnInit {
     constructor(private randombeer: RandomBeerService) { }
 
   ngOnInit() {
-    this.randombeer.getRandomBeers()
-      .subscribe(data =>
-        {
-          this.retrievedBeer = data;         
-        }
-    );
+
+    //retrievedBeer = this.http.get<RandomBeer>()
+    // this.randombeer.getRandomBeers(); 
+    this.getBeer()
+
   }
+
+  getBeer() {
+    this.randombeer.getRandomBeers().subscribe(response=> this.retrievedBeer=response["data"]); 
+  }
+
+  // getBeerImage() {
+  //   this.randombeer.getRandomBeerImage().subscribe(response=> this.retrievedBeer=response["labels"]);
+  // }
 
 
 }

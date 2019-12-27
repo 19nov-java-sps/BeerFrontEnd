@@ -10,8 +10,8 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient, private router: Router) { }
 
-  // private url: string = "http://3.90.228.40:8080/BeerBackend/login"; 
-    private url: string = "http://localhost:8080/BeerBackend/login"; 
+  private url: string = "http://3.90.228.40:8080/BeerBackend/login"; 
+    // private url: string = "http://localhost:8080/BeerBackend/login"; 
 
   private body: string; 
 
