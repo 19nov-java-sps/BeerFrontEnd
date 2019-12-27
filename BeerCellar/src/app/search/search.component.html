@@ -1,0 +1,36 @@
+<button class='btn btn-info' (click)="getBeer()">Lager</button>
+<!-- <button class='btn btn-info'>Ale</button> -->
+<button class='btn btn-info' (click)="press()">Pale Ale</button>
+<button class='btn btn-info'>Amber Ale</button>
+<button class='btn btn-info'>Brown Ale</button>
+<button class='btn btn-info'>Stout</button>
+<button class='btn btn-info'>Porter</button>
+
+
+<div *ngIf="paleAleButton">
+<h1> Pale Ale </h1>
+
+<table class="table table-striped" >
+  <thead class="thead-dark">
+    <tr>
+      <th> Name </th>
+      <th> Low IBU </th>
+      <th> High IBU </th>
+      <th> Low ABV </th>
+      <th> High ABV </th>
+      <th> Low SRM </th>
+      <th> High SRM </th>
+    </tr>
+  </thead>
+  <tr *ngFor> 
+      <td></td>
+    <!-- <td>{{ searchedBeers[i]["name"] }}</td>
+    <td>{{ searchedBeers["style"]["ibuMin"] }}</td>
+    <td>{{ searchedBeers["style"]["ibuMax"] }}</td>
+    <td>{{ searchedBeers["style"]["abvMin"] }}</td>
+    <td>{{ searchedBeers["style"]["abvMax"] }}</td>
+    <td>{{ searchedBeers["style"]["srmMin"] }}</td>
+    <td>{{ searchedBeers["style"]["srmMax"] }}</td> -->
+  </tr>
+</table>
+</div>

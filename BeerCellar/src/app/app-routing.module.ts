@@ -7,6 +7,7 @@ import { NavComponent } from './nav/nav.component';
 import { AccountComponent } from './account/account.component';
 import { RandomBeerComponent } from './random-beer/random-beer.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { SearchComponent } from './search/search.component';
 
 
 const routes: Routes =
@@ -18,7 +19,8 @@ const routes: Routes =
   {path: "home", component: NavComponent},
   {path: "logout",component: AccountComponent},
   {path: "random-beer", component: RandomBeerComponent},
-  {path: "favorites", component:FavoritesComponent}
+  {path: "favorites", component:FavoritesComponent},
+  {path: "search", component: SearchComponent}
 
 
 ];

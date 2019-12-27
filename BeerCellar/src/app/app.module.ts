@@ -14,6 +14,7 @@ import { LoginService } from './services/login.service';
 import { FormsModule } from '@angular/forms';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { FavoritesService } from './services/favorites.service';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FavoritesService } from './services/favorites.service';
     RandomBeerComponent,
     AccountComponent,
     LoginComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
