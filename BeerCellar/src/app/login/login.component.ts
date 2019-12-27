@@ -18,8 +18,4 @@ export class LoginComponent implements OnInit {
     this.loginService.authenticate(username, password); 
   }
 
-  // getUrl(){
-  //   return "url('https://images.unsplash.com/photo-1507310951869-fe0941df4dbd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3900&q=80')";
-  // }
-
 }

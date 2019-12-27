@@ -1,11 +1,11 @@
 
 <h1> Random Beer </h1>
 
-<table class="table table-striped">
-  <thead class="thead-dark">
+<table class="table table-bordered">
+  <thead class="thead-light">
     <tr>
       <th> Name </th>
-      <!-- <th> Image </th> -->
+      <th> Description </th>
       <th> Low IBU </th>
       <th> High IBU </th>
       <th> Low ABV </th>
@@ -17,7 +17,7 @@
 
   <tr >
     <td>{{ retrievedBeer.name }}</td>
-    <!-- <td>{{ retrievedBeer["labels"]["medium"] }}></td> -->
+    <td>{{ retrievedBeer["style"]["description"] }}></td>
     <td>{{ retrievedBeer["style"]["ibuMin"] }}</td>
     <td>{{ retrievedBeer["style"]["ibuMax"] }}</td>
     <td>{{ retrievedBeer["style"]["abvMin"] }}</td>

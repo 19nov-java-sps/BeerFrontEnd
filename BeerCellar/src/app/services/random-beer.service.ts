@@ -10,6 +10,7 @@ export class RandomBeerService {
 
   url: string = 'https://sandbox-api.brewerydb.com/v2/beer/random/?key=0da93aab15976e9da7c3265b3d4f486f';
   // imageUrl: string = 'https://sandbox-api.brewerydb.com/v2/beers/?key=0da93aab15976e9da7c3265b3d4f486f'
+  // searchLager2: string = 'http://3.90.228.40:8080/BeerBackend/beers/category/North%20American%20Lager';
   searchLager: string = 'https://sandbox-api.brewerydb.com/v2/search?q=lager&type=beer&key=0da93aab15976e9da7c3265b3d4f486f';
   searchPaleAle: string = 'https://sandbox-api.brewerydb.com/v2/search?q=pale+ale&type=beer&key=0da93aab15976e9da7c3265b3d4f486f';
   searchAmberAle: string = 'https://sandbox-api.brewerydb.com/v2/search?q=amber&type=beer&key=0da93aab15976e9da7c3265b3d4f486f';
@@ -23,9 +24,7 @@ export class RandomBeerService {
 
   getRandomBeers(): Observable<any> {
     return this.http.get<any>(this.url); 
-
   }
-
   searchforLager(): Observable<any> {
     return this.http.get<any>(this.searchLager); 
   }
@@ -45,8 +44,5 @@ export class RandomBeerService {
     return this.http.get<any>(this.searchStout); 
   }
 
-  // getRandomBeerImage(): Observable<any> {
-  //   return this.http.get<any>(this.imageUrl);
-  // }
  }
  

@@ -12,12 +12,23 @@ import { RandomBeerService } from '../services/random-beer.service';
 export class SearchComponent implements OnInit {
 
   searchedBeers: RandomBeer; 
+  lagerButton: boolean = false;
   paleAleButton : boolean = false
+  amberButton : boolean = false
+  brownButton : boolean = false
+  porterButton : boolean = false
+  stoutButton : boolean = false
 
   constructor(private searchBeer: RandomBeerService) { }
 
   ngOnInit() {
+   this.getLager();
    this.getPaleAle(); 
+   this.getAmberAle();
+   this.getBrownAle();
+   this.getPorter();
+   this.getStout();
+   
   }
 
   getLager() {
@@ -28,23 +39,40 @@ export class SearchComponent implements OnInit {
     this.searchBeer.searchforPaleAle().subscribe(response=> console.log(this.searchedBeers=response["data"])); 
   }
   getAmberAle() {
-    this.searchBeer.searchforAmberAle().subscribe(response=> this.searchedBeers=response["data"]); 
+    this.searchBeer.searchforAmberAle().subscribe(response=> console.log(this.searchedBeers=response["data"])); 
   }
   getBrownAle() {
-    this.searchBeer.searchforBrownAle().subscribe(response=> this.searchedBeers=response["data"]); 
+    this.searchBeer.searchforBrownAle().subscribe(response=> console.log(this.searchedBeers=response["data"])); 
   }
   getPorter() {
-    this.searchBeer.searchforPorter().subscribe(response=> this.searchedBeers=response["data"]); 
+    this.searchBeer.searchforPorter().subscribe(response=> console.log(this.searchedBeers=response["data"])); 
   }
   getStout() {
-    this.searchBeer.searchforStout().subscribe(response=> this.searchedBeers=response["data"]); 
+    this.searchBeer.searchforStout().subscribe(response=> console.log(this.searchedBeers=response["data"])); 
   }
 
-  press() {
-    this.paleAleButton = !this.paleAleButton
+pressAle() {
+    // this.lagerButton = !this.lagerButton
+  this.paleAleButton = !this.paleAleButton
+
     // if (this.paleAleButton) {
       // this.getPaleAle; 
     // }
   }
+pressLager(){
+this.lagerButton = !this.lagerButton
+}
+pressAmber(){
+  this.amberButton = !this.amberButton
+}
+pressBrown(){
+  this.brownButton = !this.brownButton
+}
+pressPorter(){
+  this.porterButton =!this.porterButton
+}
+pressStout(){
+  this.stoutButton = !this.stoutButton
+}
 
 }

@@ -1,6 +1,6 @@
 export class RandomBeer { 
          name: string;
-         image: string;
+         description: string;
          ibuMin: number;
          ibuMax: number;
          abvMin: number;
