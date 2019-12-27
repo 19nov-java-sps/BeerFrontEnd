@@ -22,8 +22,8 @@
       <th> High SRM </th>
     </tr>
   </thead>
-  <tr *ngFor> 
-      <td></td>
+  <tr ng-repeat="i in [] | range:10"> 
+      <td> {{ searchedBeers[$index]["name"] }}</td>
     <!-- <td>{{ searchedBeers[i]["name"] }}</td>
     <td>{{ searchedBeers["style"]["ibuMin"] }}</td>
     <td>{{ searchedBeers["style"]["ibuMax"] }}</td>

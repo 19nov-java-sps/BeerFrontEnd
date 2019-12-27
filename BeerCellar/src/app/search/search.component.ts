@@ -40,11 +40,24 @@ export class SearchComponent implements OnInit {
     this.searchBeer.searchforStout().subscribe(response=> this.searchedBeers=response["data"]); 
   }
 
-  press() {
-    this.paleAleButton = !this.paleAleButton
-    // if (this.paleAleButton) {
-      // this.getPaleAle; 
-    // }
+  pressLager() {
+    this.LagerButton = !this.LagerButton
   }
+  pressPaleAle() {
+    this.paleAleButton = !this.paleAleButton
+  }
+  pressAmberAle() {
+    this.amberAleButton = !this.amberAleButton
+  }
+  pressBrownAle() {
+    this.brownAleButton = !this.brownAleButton
+  }
+  pressStout() {
+    this.stoutButton = !this.stoutButton
+  }
+  pressPorter() {
+    this.porterButton = !this.porterButton
+  }
+
 
 }
